@@ -30,8 +30,9 @@ function greeting_andrej() {
 		"good to see you, " + buddy() + "!",
 		"what's up, " + buddy() + "?",
 		"hey " + buddy() + "!");
-	say_andrej(ary[Math.floor(Math.random()*ary.length)]);
-	$.wait( function(){ howmuch_andrej() }, 5);
+	var phrase = ary[Math.floor(Math.random()*ary.length)];
+	say_andrej(phrase);
+	$.wait( function(){ howmuch_andrej() }, phrase.length * .1 + 1);
 }
 
 function howmuch_andrej() {
@@ -43,8 +44,9 @@ function howmuch_andrej() {
 		"how much " + shit() + "?",
 		"tell me price " + shit() + "?",
 		"tell me how expensive " + shit() + "?");
-	say_andrej(ary[Math.floor(Math.random()*ary.length)]);
-	$.wait( function(){ show_input() }, 3.5);
+	var phrase = ary[Math.floor(Math.random()*ary.length)];
+	say_andrej(phrase);
+	$.wait( function(){ show_input() }, phrase.length * .1 + 1);
 }
 
 function no_andrej(quote) {
@@ -63,8 +65,9 @@ function no_andrej(quote) {
 			"stop trying to fuck me with " + shit() + ".",
 			"i have new airsoft just for you " + buddy() + "."
 			);
-		say_andrej(ary[Math.floor(Math.random()*ary.length)]);
-		$.wait( function(){ howmuch_andrej() }, 3.5);
+		var phrase = ary[Math.floor(Math.random()*ary.length)];
+		say_andrej(phrase);
+		$.wait( function(){ howmuch_andrej() }, phrase.length * .1 + 1);
 	} else {
 		var ary = Array(
 			"that is not even a number.",
@@ -73,8 +76,9 @@ function no_andrej(quote) {
 			"don't speak nonsense.",
 			"say number, dumbass."
 			);
-		say_andrej(ary[Math.floor(Math.random()*ary.length)]);
-		$.wait( function(){ howmuch_andrej() }, 3.5);
+		var phrase = ary[Math.floor(Math.random()*ary.length)];
+		say_andrej(phrase);
+		$.wait( function(){ howmuch_andrej() }, phrase.length * .1 + 1);
 	}
 }
 
@@ -104,9 +108,9 @@ function set_blinking() {
 	$("#andrej-blink").show();
 }
 
-function say_andrej(speech) {
+function say_andrej(phrase) {
 	set_talking();
-	$("#andrej").html(speech);
+	$("#andrej").html(phrase);
 	$("#andrej").modemizr();
-	$.wait( function(){ set_blinking() }, speech.length * .1);
+	$.wait( function(){ set_blinking() }, phrase.length * .1);
 }

@@ -22,14 +22,13 @@ body {
 <audio loop autoplay>
     <source src="next.mp3" type="audio/mpeg" />
 </audio>
-<center><div id="intro"><h1>andrej adventure</h1>
-you are a sales representative for AWS.<br>
-you must sell andrej a new exciting amazon product.<br>
-<a href="game.html">click here to play</a><br></div>
+<center><div id="intro"></div>
 </center>
 <script>
-  window.addEventListener("load", function() {
-  modemizr(document.getElementById("intro"), null, {cursor: true, blink: true}); });
+$( document ).ready(function() {
+	$("#intro").html("<h1>andrej adventure</h1>you are a sales representative for AWS.<br>you must sell andrej a new exciting amazon product.<br><a href=\"game.html\">click here to play</a><br>");
+	$("intro").modemizr();
+});
 </script>
 </body>
 </html>

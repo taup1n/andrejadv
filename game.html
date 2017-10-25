@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.4, user-scalable=no" /> -->
+
+<title>andrej adventure</title>
+<style type="text/css">
+body,td,th {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: #00FF00;
+}
+body {
+	background-color: #000000;
+}
+textarea:focus, input:focus{
+	font-size: 40px;
+    outline: none;
+}
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 40px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 40px;
+  }
+}
+</style>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/modemizr.js"></script>
+<script src="js/game.js"></script>
+</head>
+
+<body width="100%">
+<audio loop autoplay>
+    <source src="next.mp3" type="audio/mpeg" />
+</audio>
+<center>
+<img src="andrej-blink.gif" id="andrej-blink"><img src="andrej-talk.gif" id="andrej-talk" style="display: none;"><br><br>
+<div id="andrej"></div><br>
+<div id="aws"></div>
+
+</center>
+<script>
+$( document ).ready(function() {
+	intro();
+});
+</script>
+</body>
+</html>
